@@ -1,12 +1,10 @@
 image: gitpod/workspace-full
 
 tasks:
+  - name: slow prebuild
+    init: sleep 2m
   - name: Foo
     init: |
       npm install vscode
       echo "Foobar 🎉 "
 
-github:
-  prebuilds:
-    master: true
-    branches: true
